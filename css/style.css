@@ -1,0 +1,122 @@
+:root {
+  --color: rgb(255, 255, 255);
+  --disabled-color: rgb(129, 129, 129);
+  --bg-color: rgb(32, 30, 36);
+  --bg-color-transparent: rgb(32, 30, 36,0.3);
+  --hover-color: rgba(255, 255, 255, 0.3);
+}
+* {
+  font-family: Montserrat;
+  color: var(--color);
+  outline: unset;
+  box-sizing: border-box;
+  /* outline: 1px dotted rgba(255, 255, 255, 0.1); */
+}
+body{
+  background-color: var(--bg-color);}
+.material-symbols-sharp {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  
+  background-color: transparent;
+}
+.material-symbols-sharp:not(.disabled):hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}
+.material-symbols-sharp.disabled {
+  cursor: default;
+  color: var(--disabled-color);
+}
+span.material-symbols-sharp {
+  display: block;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+  padding-top: 2rem;
+}
+.gallery-container {
+  padding: 0.5rem;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  overflow: hidden;
+}
+.gallery-container.fullscreen {
+  padding: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.gallery-container.fullscreen .gallery-view {
+  width: 100%;
+  height: 100%;
+}
+.gallery-container.fullscreen .gallery-nav {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--bg-color-transparent);
+}
+.gallery-view {
+  position: relative;
+  width: 1024px;
+  height: 576px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.gallery-item {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.full-screen-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2em;
+  background-color: transparent;
+  z-index: 10;
+}
+.full-screen-btn span.material-symbols-sharp {
+  font-size: 1.5em;
+}
+.gallery-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.gallery-item img {
+  height: 100%;
+  margin: auto;
+}
+.gallery-dots {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.gallery-dot {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid;
+}
+
+.gallery-dot:hover {
+  background-color: var(--hover-color);
+}
+.gallery-dot.active {
+  background-color: var(--color);
+}
